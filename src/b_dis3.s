@@ -1,7 +1,6 @@
-	.text
-	.align	2
-	.globl	aaa
-aaa:
+#include "asm_mac.i"
+
+func aaa
 	//; top of stack is jsr address, as a long
 	//; parameters are then in-order, as longs.
 	//; to call a function, push params in reverse order then pop with lea after.
@@ -40,4 +39,4 @@ fillLoop:
 
 	nop
 	rts
-	.size	aaa, .-aaa
+	

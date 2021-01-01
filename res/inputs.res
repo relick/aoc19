@@ -1,0 +1,1 @@
+BIN input01 01.txt
