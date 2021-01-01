@@ -65,3 +65,23 @@ void print(char* s)
 	puts(s);
 	flushLine();
 }
+
+void printInt(int n)
+{
+	char num[12];
+	u8 numDigits = 0;
+	num[11] = 0;
+	while(n > 0)
+	{
+		num[11 - ++numDigits] = n % 10 + '0';
+		n /= 10;
+	}
+	if(numDigits == 0)
+	{
+		print("0");
+	}
+	else
+	{
+		print(&num[11 - numDigits]);
+	}
+}
