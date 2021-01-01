@@ -1,5 +1,6 @@
 #include "asm_mac.i"
 
+//; extern void aaa(u16 i, char const* s);
 func aaa
 	//; top of stack is jsr address, as a long
 	//; parameters are then in-order, as longs.
@@ -16,7 +17,7 @@ func aaa
 	jsr		MEM_alloc
 	addq	#4,%sp
 	//; save a2
-	move.l	%a2,-(%sp)
+	movem.l	%a2/%a3,-(%sp)
 	//; str ptr into a0
 	movea.l	%d0,%a2
 	moveq	#6,%d1
@@ -35,7 +36,7 @@ fillLoop:
 	jsr		MEM_free
 	addq	#4,%sp
 	//; unsave a2
-	movea.l	(%sp)+,%a2
+	movem.l	(%sp)+,%a2/%a3
 
 	nop
 	rts

@@ -6,17 +6,17 @@
 
 void day1_c()
 {
-	print("\nDay 1:\n");
+	print("Day 1 (C):");
 
-	int n = 0;
+	s32 n = 0;
 	u8 const* c = input01;
-	int fuelSumPart1 = 0;
-	int fuelSumPart2 = 0;
+	s32 fuelSumPart1 = 0;
+	s32 fuelSumPart2 = 0;
 	for(; *c != 0; ++c)
 	{
 		if(*c == '\n')
 		{
-			int extraFuel = n;
+			s32 extraFuel = n;
 			{
 				extraFuel /= 3;
 				extraFuel -= 2;

@@ -18,11 +18,12 @@ int main()
   //////////////////////////////////\n");
 	print("Welcome to Advent of Code 2019, to be\nattempted on the SEGA Mega Drive using\nC and 68k ASM!\n");
 
-	print("Running...");
+	print("Running...\n");
 	
 	SYS_doVBlankProcess();
 
-	day1_c();
+	//day1_c();
+	day1_a();
 
 	while(1)
 	{
