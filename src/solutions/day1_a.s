@@ -82,19 +82,14 @@ nextChar:
 finish:
 	pea		.part1
 	jbsr	print
-	addq	#4,%sp
-
 	move.l	%d3,-(%sp)
 	jbsr	printInt
-	addq	#4,%sp
-	
 	pea		.part2
 	jbsr	print
-	addq	#4,%sp
-
 	move.l	%d4,-(%sp)
 	jbsr	printInt
-	addq	#4,%sp
+	lea		(16,%sp),%sp //; clear print stack in 1 go
 
+	//; restore registers
 	movem.l	(%sp)+,%a2/%d2-%d5
 	rts

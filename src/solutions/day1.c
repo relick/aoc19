@@ -1,6 +1,5 @@
-#include "days.h"
-
 #include <genesis.h>
+#include "days.h"
 #include "inputs.h"
 #include "print.h"
 

@@ -4,8 +4,6 @@
 #include "inputs.h"
 #include "days.h"
 
-extern void aaa(u16 i, char const* s);
-
 int main()
 {
 	print("  //////////////////////////////////\n\
@@ -23,7 +21,10 @@ int main()
 	SYS_doVBlankProcess();
 
 	//day1_c();
-	day1_a();
+	//day1_a();
+
+	day2_c();
+	//day2_a();
 
 	while(1)
 	{
